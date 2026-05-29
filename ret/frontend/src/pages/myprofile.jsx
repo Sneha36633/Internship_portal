@@ -30,7 +30,7 @@ const MyProfile = () => {
           return;
         }
 
-        const response = await fetch("http://127.0.0.1:8000/api/users/me", {
+        const response = await fetch("https://internship-portal-backend-4ju0.onrender.com/api/users/me", {
           method: "GET",
           headers: {
             "Content-Type": "application/json",
@@ -70,7 +70,7 @@ const MyProfile = () => {
   const handleSave = async () => {
     try {
       const token = localStorage.getItem("token");
-      const response = await fetch("http://127.0.0.1:8000/api/users/me", {
+      const response = await fetch("https://internship-portal-backend-4ju0.onrender.com/api/users/me", {
         method: "PUT",
         headers: {
           "Content-Type": "application/json",
