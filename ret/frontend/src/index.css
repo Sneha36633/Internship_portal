@@ -1,0 +1,142 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* --- Shimmer Animation (Logo) --- */
+@keyframes shimmer {
+  0% { background-position: -500% 0; }
+  100% { background-position: 500% 0; }
+}
+
+.shimmer {
+  background-size: 200% 100%;
+  animation: shimmer 2s linear infinite;
+  background-image: linear-gradient(
+    90deg,
+    rgba(255, 98, 0, 0.3) 0%,
+    rgba(255, 215, 0, 0.85) 50%,
+    rgba(255, 128, 0, 0.3) 100%
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* --- Button Glow (Orange-Gold, No Upscale) --- */
+.button-glow {
+  transition: box-shadow 0.3s ease, background 0.3s ease;
+}
+
+.button-glow:hover {
+  box-shadow: 0 6px 20px rgba(255, 165, 0, 0.6);
+  background-image: linear-gradient(to right, #f97316, #facc15); /* orange → gold */
+}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@keyframes shimmer {
+  0% { background-position: -500% 0; }
+  100% { background-position: 500% 0; }
+}
+
+.shimmer {
+  background-size: 200% 100%;
+  animation: shimmer 5s linear infinite; /* slowed from 2s → 5s */
+}
+/* --- Custom shimmer gold effect --- */
+.shimmer-gold {
+  display: inline-block;
+  background: linear-gradient(
+    90deg,
+    #7c4f00 0%,
+    #ff7b00 20%,
+    #ffbf00 40%,
+    #ff9500 60%,
+    #ffd700 80%,
+    #ffbf00 100%
+  );
+  background-size: 200% auto;
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+  animation: shimmer 3s linear infinite;
+  -webkit-text-stroke: 1px black; /* outline */
+}
+
+@keyframes shimmer {
+  0% { background-position: 200% center; }
+  100% { background-position: -200% center; }
+}
+/* In your src/index.css or equivalent global stylesheet */
+.animated-gradient {
+  background: linear-gradient(-45deg, #0f172a, #1e293b, #111827, #334155);
+  background-size: 400% 400%;
+  animation: gradient 15s ease infinite;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+/* In your src/index.css (add this with your other custom styles) */
+
+.shimmer-gold {
+  /* Define the gold gradient */
+  background: linear-gradient(110deg, #cfc09f 45%, #ffebb2 50%, #cfc09f 55%);
+  background-size: 200% 100%;
+  
+  /* Clip the background to the text */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+
+  /* Animate the gradient position */
+  animation: shimmer-animation 4s linear infinite;
+}
+
+/* You might already have a shimmer animation, if not, you can use this one */
+@keyframes shimmer-animation {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
+}
+/* In src/index.css */
+
+.animated-gradient {
+  background: linear-gradient(-45deg, #0f172a, #1e293b, #111827, #334155);
+  background-size: 400% 400%;
+  animation: gradient 15s ease infinite;
+}
+
+@keyframes gradient {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.shimmer-gold {
+  background: linear-gradient(110deg, #cfc09f 45%, #ffebb2 50%, #cfc09f 55%);
+  background-size: 200% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shimmer-animation 4s linear infinite;
+}
+
+/* Re-using the shimmer animation from your logo */
+@keyframes shimmer-animation {
+  0% { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
+}
