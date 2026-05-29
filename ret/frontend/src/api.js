@@ -1,8 +1,9 @@
 import axios from "axios";
 
 // set your backend URL here
-const API = axios.create({ baseURL: "http://localhost:8000" });
-
+const API = axios.create({
+  baseURL: import.meta.env.VITE_API_URL,
+});
 // Authentication endpoints
 export const login = (data) => API.post("/api/auth/login", data);
 export const register = (data) => API.post("/api/auth/register", data);
